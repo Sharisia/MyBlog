@@ -1,13 +1,34 @@
-*{
+* {
     margin: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.container1{ 
+.logo {
+    width: 10%;
+    margin: auto;
+}
+
+/*DeskTop*/
+@media (min-width: 900px) {
+    .desktop-menu {
+        width: 80%;
+        float: right;
+        flex-wrap: wrap;
+    }
+    .mobile-menu{
+        display: none;
+    }
+}
+
+nav{
+    text-align: right;
+}
+
+.container1 {
     display: flex;
     width: 80%;
     margin: auto;
@@ -15,24 +36,24 @@ body{
     justify-content: center;
 }
 
-img{
-    width: 20%;
+img {
+    /*width: 50%;
     padding: 20px;
+    align-items: center;*/
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10%;
     align-items: center;
 }
 
-nav{
-    text-align: right; 
-}
-
-.login{
-    background-color:rgb(254, 244, 220); 
+.login {
+    background-color: rgb(254, 244, 220);
     text-align: center;
     padding-bottom: 80px;
     padding-top: 30px;
 }
 
-input#login{
+input#login {
     padding: 15px;
     width: 450px;
     border-radius: 10px;
@@ -40,32 +61,40 @@ input#login{
     color: #cbc5c5;
 }
 
-button{
-    padding: 10px; 
-    width: 210px; 
-    border-radius: 20px; 
+button {
+    padding: 10px;
+    width: 210px;
+    border-radius: 20px;
     border: 0.5px solid grey;
     background-color: rgb(116, 4, 4);
     color: white;
 }
 
-.container2{
+.container2 {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
 }
 
-.left img{
-    width: 90%;
-    height: 90%;
+.left img {
+    width: 100%;
+    height: auto;
 }
 
-.right{
+.right1{
+    padding-bottom: 20px;
     align-items: center;
-    
+    padding-top: 5px;
 }
 
-.right2 input{
+.right2{
+    padding-left: 30px;
+
+}
+
+.right2 input {
     width: 70%;
     padding: 12px;
     border-radius: 5px;
@@ -73,18 +102,19 @@ button{
     border-color: grey solid;
     border: 1px solid;
     font-size: larger;
+    padding-left: 10px;
 }
 
-.Introduction{
+.Introduction {
     background-image: url(images/SBbackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 105vh; 
+    height: 105vh;
     margin: 0;
 }
 
-.Introduction1{
+.Introduction1 {
     float: right;
     text-align: center;
     width: 45%;
@@ -93,80 +123,85 @@ button{
     padding-top: 120px;
 }
 
-.Introduction1 h1{
+.Introduction1 h1 {
     font-size: 80px;
     letter-spacing: 2px;
-    color:  rgb(116, 4, 4);
+    color: rgb(116, 4, 4);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.Introduction1 button{
+.Introduction1 button {
     font-size: larger;
     letter-spacing: 2px;
 }
 
-.display{
+.display {
     width: 95%;
     margin: auto;
     padding-top: 5%;
-    
+
 }
 
-.display1{
-text-align: center;
+.display1 {
+    text-align: center;
 }
 
-.display2{
+.display2 {
     display: flex;
     flex-wrap: wrap;
     padding-top: 3%;
     background-color: rgb(247, 232, 198);
     padding-bottom: 3%;
     width: 100%;
-     justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 
-.display2 h3{
+.display2 h3 {
     text-align: center;
-    color:  rgb(116, 4, 4);
+    color: rgb(116, 4, 4);
 }
 
-.display2 div{
+.display2 div {
     width: 25%;
     margin: auto;
 
 }
 
-.display2 img{
+.display2 img {
     width: 100%;
     object-fit: cover;
     border-radius: 10%;
     align-items: center;
-   
+    padding: 15px;
 }
+
 /* .display2 p{
     padding: 5%;
 } */
 
-.Home{
+.Home {
     width: 90%;
     margin: auto;
     padding-top: 5%;
     margin-bottom: 5%;
 }
 
-.Home img{
+.Home img {
     object-fit: cover;
     width: 100%;
     height: 350px;
     border-radius: 50px;
 }
 
-.Home1{
-    padding-left: 25px;
+.Home1 {
+    padding: 25px;
 }
 
-.Gallery{
+.Home li, h3{
+    padding-bottom: 5px;
+}
+
+.Gallery {
     width: 90%;
     display: flex;
     margin: auto;
@@ -174,7 +209,7 @@ text-align: center;
     justify-content: center;
 }
 
-.Gallery img{
+.Gallery img {
     width: 90%;
     object-fit: cover;
     border-radius: 10%;
@@ -183,19 +218,21 @@ text-align: center;
     justify-content: center;
 }
 
-.Gallery1, .Gallery2{
+.Gallery1,
+.Gallery2 {
     width: 45%;
     padding: 30px;
     align-items: center;
 }
-.Gallery button{
+
+.Gallery button {
     margin-bottom: 20px;
 }
 
 .contact {
     margin-left: -2%;
     margin-right: -2%;
-    margin-top: -4%;
+    margin-top: 0%;
     margin-bottom: 5%;
     text-align: center;
     font-size: xx-large;
@@ -210,32 +247,33 @@ text-align: center;
     font-size: x-large;
     letter-spacing: 0.2px;
     line-height: 1.5;
-    
+
 }
 
-.random{
+.random {
     width: 50%;
     margin: auto;
-    margin-top:5%;
+    margin-top: 5%;
 }
 
-.contact1{
+.contact1 {
     width: 70%;
     margin: auto;
     text-align: center;
-    font-size: x-large; 
+    font-size: x-large;
     line-height: 30px;
     letter-spacing: 0.5px;
     margin-top: 0%;
 }
 
-.contact21{
+.contact21 {
     margin: auto;
     width: 70%;
     margin-bottom: 10%;
 }
 
-td, tr {
+td,
+tr {
     padding: 10px;
     border: 1px solid rgb(249, 248, 248);
     text-align: justify;
@@ -245,29 +283,45 @@ td, tr {
 }
 
 tr:nth-child(even) {
-    background-color:  rgb(249, 202, 82);
-  }
+    background-color: rgb(249, 202, 82);
+}
 
 table {
     margin-top: 15%;
     border-collapse: collapse;
-  }
+}
 
-  footer {
+footer {
     text-align: center;
     padding: 25px;
     color: white;
 }
 
+
 /*mobile devices*/
-@media (max-width: 1096px){
-    .Introduction{
+@media (max-width: 1024px) {
+
+    .desktop-menu {
+            width: 80%;
+            float: right;
+            flex-wrap: wrap;
+    }
+
+    .mobile-menu{
+            display: none;
+    }
+
+    .logo{
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .Introduction {
         background-color: rgb(247, 232, 198);
-        /*background-image: none;*/
         height: 100%;
     }
 
-    .Introduction1{
+    .Introduction1 {
         float: none;
         text-align: center;
         width: 100%;
@@ -277,84 +331,144 @@ table {
         padding-bottom: 5%;
     }
 
-    .Introduction1 h1{
+    .Introduction1 h1 {
         padding: 2%;
         /*padding-bottom: 5%;*/
         font-size: 50px;
         letter-spacing: 2px;
-        color:  rgb(116, 4, 4);
+        color: rgb(116, 4, 4);
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    .Introduction1 h2{
+
+    .Introduction1 h2 {
         padding: 2%;
         font-size: x-large;
     }
 
-    .Introduction1 h3{
+    .Introduction1 h3 {
         padding: 2%;
         font-size: x-large;
     }
 
-    .Introduction1 button{
+    .Introduction1 button {
         font-size: large;
         letter-spacing: 2px;
     }
-    .display2{
+
+    .display2 {
         /*display: block;*/
         width: 100%;
         margin: auto;
     }
-    .display2 div{
+
+    .display2 div {
         width: 50%;
         margin: auto;
+        padding: 20px;
     }
+
+    .Home{
+        line-height: 20px;
+    }
+
+    .Home h2{
+        padding-top: 15px;
+    }
+
+    .Home h3{
+        padding-bottom: 10px;
+    }
+    .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+    }
+
+
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
+    
+    .desktop-menu{
+        display: none;
+    }
 
-    .display2{
+    .mobile-menu{
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    nav{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .display2 {
         display: block;
         width: 100%;
         margin: auto;
     }
-    .display2 div{
-        width: 100%;
+
+    .display2 div {
+        width: 90%;
         margin: auto;
     }
 
-    @media (max-width: 1705px){
-        .Introduction{
-            background-color: rgb(247, 232, 198);
-            background-image: none;
-            height: 100%;
-        }
+    .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+    }
+
+    .container1 {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        /*display: block;*/
+        padding-top: 15px;
+    }
+
+    .logo{
+        width: 25%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    /*.container1 img{
+        width: 40%;
+        height: auto;
+        align-items: center;
+    }*/
     
-        .Introduction1{
-            float: right;
-            text-align: center;
-            width: 45%;
-            height: 100%;
-            background-color: rgba(130, 126, 126, 0.21);
-            padding-top: 40%;
-        }
-    
-        .Introduction1 h1{
-            padding: 2%;
-            /*padding-bottom: 5%;*/
-            font-size: 50px;
-            letter-spacing: 2px;
-            color:  rgb(116, 4, 4);
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        .Introduction1 h2{
-            padding: 2%;
-            font-size: x-large;
-        }
-    
-        .Introduction1 h3{
-            padding: 2%;
-            font-size: x-large;
-        }
 }
+
+@media (max-width: 1700) {
+
+    /* .Introduction img{
+        object-fit: cover;
+        width: 100%;
+        height: 150px;
+    }*/
+
+    .Introduction {
+        background-image: none;
+    }
+
+    .Introduction1 {
+        float: right;
+        text-align: center;
+        width: 45%;
+        height: 60%;
+        background-color: rgba(130, 126, 126, 0.21);
+        padding-top: 150px;
+    }
+
 
 }
